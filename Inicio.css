@@ -1,0 +1,796 @@
+/* ==========================================
+   RESET Y VARIABLES GENERALES
+   ========================================== */
+:root {
+    --color-primario: #8B4513; 
+    --color-secundario: #D2B48C; 
+    --color-texto: #333333;
+    --color-blanco: #FFFFFF; 
+    
+    --fuente-titulos: 'Lora', serif;
+    --fuente-textos: 'Open Sans', sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--fuente-textos);
+    color: var(--color-texto);
+    background-color: var(--color-blanco);
+}
+
+/* ==========================================
+   BARRA DE NAVEGACIÓN BOOTSTRAP
+   ========================================== */
+.mi-navbar {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo {
+    font-family: var(--fuente-titulos);
+    font-size: 24px;
+    font-weight: 600;
+    color: var(--color-primario) !important;
+}
+
+.nav-links a {
+    color: var(--color-texto) !important;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-primario) !important;
+}
+
+/* ==========================================
+   PORTADA (HERO SECTION)
+   ========================================== */
+.hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.6)), 
+                url('img/xd.jpg') center/cover no-repeat;
+    background-attachment: fixed;
+    position: relative; 
+}
+
+.hero-content {
+    max-width: 800px;
+    color: #ffffff;
+    margin-top: 60px;
+    margin-bottom: 120px; /* Separación de la curva */
+    position: relative;
+    z-index: 10; 
+}
+
+.hero-content h1 {
+    font-family: var(--fuente-titulos);
+    font-size: 3.5rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+/* BOTÓN CALL TO ACTION */
+.btn-primary {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--color-primario);
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #6b330e;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* ==========================================
+   DIVISOR CURVO (SHAPE DIVIDER)
+   ========================================== */
+.custom-shape-divider-bottom {
+    position: absolute;
+    bottom: -1px; 
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    z-index: 1;
+}
+
+.custom-shape-divider-bottom svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 120px; 
+}
+
+.custom-shape-divider-bottom .shape-fill {
+    fill: #FFFFFF; 
+}
+
+.contenido-prueba {
+    background-color: #FFFFFF;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+/* ==========================================
+   AJUSTES PARA CELULARES (MEDIA QUERIES)
+   ========================================== */
+@media (max-width: 768px) {
+    .hero-content h1 {
+        font-size: 2.5rem; /* Texto más pequeño en móvil */
+    }
+    
+    .hero-content p {
+        font-size: 1rem;
+    }
+    
+    .custom-shape-divider-bottom svg {
+        height: 60px; /* La curva es más pequeña en celular para ahorrar espacio */
+    }
+    
+    .hero-content {
+        margin-bottom: 60px; /* Ajustamos la distancia del botón a la nueva curva */
+    }
+}
+
+
+/* ==========================================
+   SECCIÓN: HISTORIA
+   ========================================== */
+.seccion-historia {
+    background-color: var(--color-blanco);
+    padding: 80px 0; /* Espacio arriba y abajo para que respire el contenido */
+}
+
+.titulo-seccion {
+    font-family: var(--fuente-titulos);
+    font-size: 2.5rem;
+    color: var(--color-primario);
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.subtitulo-seccion {
+    font-family: var(--fuente-textos);
+    font-size: 1.2rem;
+    color: #666666; /* Un gris sutil para no robar atención */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 25px;
+}
+
+.texto-historia p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--color-texto);
+    margin-bottom: 20px;
+    text-align: justify; /* Justificado para que parezca libro de historia */
+}
+
+.imagen-historia {
+    width: 100%;
+    border-radius: 15px; /* Bordes suaves */
+    transition: transform 0.3s ease;
+}
+
+/* Un pequeño efecto para que la imagen resalte si pasas el mouse */
+.imagen-historia:hover {
+    transform: scale(1.02);
+}
+
+
+
+/* ==========================================
+   SECCIÓN: DATOS CURIOSOS
+   ========================================== */
+.seccion-datos {
+    /* Un beige muy sutil para separar esta sección de la blanca de arriba */
+    background-color: #F9F7F1; 
+}
+
+.tarjeta-dato {
+    background-color: var(--color-blanco);
+    border-radius: 15px;
+    border-top: 5px solid var(--color-secundario); /* Línea decorativa arriba */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el mouse por la tarjeta */
+.tarjeta-dato:hover {
+    transform: translateY(-10px); /* Hace que la tarjeta suba un poco */
+    box-shadow: 0 15px 30px rgba(0,0,0,0.1) !important; /* Aumenta la sombra */
+}
+
+.icono-dato {
+    font-size: 3.5rem; /* Usamos emojis gigantes como iconos rápidos y limpios */
+}
+
+.titulo-dato {
+    font-family: var(--fuente-titulos);
+    color: var(--color-primario);
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* ==========================================
+   SECCIÓN: QUÉ HACER (TURISMO)
+   ========================================== */
+.seccion-actividades {
+    background-color: var(--color-blanco);
+}
+
+.tarjeta-actividad {
+    border-radius: 15px;
+    overflow: hidden; /* Evita que la foto se salga de los bordes redondeados */
+    transition: transform 0.3s ease;
+}
+
+.tarjeta-actividad img {
+    height: 250px;
+    object-fit: cover; /* Recorta la imagen para que todas midan igual sin deformarse */
+}
+
+.tarjeta-actividad:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15) !important;
+}
+
+/* ==========================================
+   ANIMACIÓN: INUNDACIÓN Y OLAS DINÁMICAS
+   ========================================== */
+.contenedor-inundacion {
+    position: relative;
+    height: 400px; 
+    /* Un cielo degradado para darle más realismo al paisaje */
+    background: linear-gradient(to bottom, #87CEEB 0%, #E0F7FA 100%); 
+    overflow: hidden; 
+    border-top: 5px solid var(--color-secundario);
+}
+
+.svg-escenario {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 2; /* El paisaje va detrás del agua */
+}
+
+/* El cuerpo principal del agua */
+.ola-agua {
+    position: absolute;
+    bottom: -100%; /* Empieza escondida */
+    left: 0;
+    width: 100%;
+    height: 55%; /* Tapa la iglesia, pero deja las casitas de las colinas a salvo */
+    background-color: rgba(42, 75, 92, 0.9); 
+    z-index: 3; 
+    transition: bottom 4s ease-in-out; /* Animación de 4 segundos al bajar/subir */
+}
+
+/* El JS activa esto al hacer scroll */
+.ola-agua.inundar {
+    bottom: 0;
+}
+
+/* Base para las olas animadas */
+.ola {
+    position: absolute;
+    left: 0;
+    width: 200%; /* El doble de ancho para que pueda deslizarse sin cortarse */
+    height: 60px;
+    background-repeat: repeat-x;
+    background-size: 50% 100%;
+}
+
+/* Ola Trasera: Color más claro, se mueve lento (Efecto profundidad) */
+.ola-trasera {
+    top: -45px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120'%3E%3Cpath fill='%23477187' fill-opacity='0.7' d='M0,60 C300,0 600,120 900,60 C1200,0 1500,120 1800,60 L1800,120 L0,120 Z'/%3E%3C/svg%3E");
+    animation: moverOlas 8s linear infinite;
+    z-index: 3;
+}
+
+/* Ola Frontal: Color oscuro (Presa), se mueve más rápido */
+.ola-frontal {
+    top: -30px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120'%3E%3Cpath fill='%232a4b5c' fill-opacity='0.9' d='M0,60 C300,120 600,0 900,60 C1200,120 1500,0 1800,60 L1800,120 L0,120 Z'/%3E%3C/svg%3E");
+    animation: moverOlas 5s linear infinite;
+    z-index: 4;
+}
+
+/* La magia del movimiento continuo de las olas */
+@keyframes moverOlas {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); } /* Se desliza hasta la mitad y se reinicia suavemente */
+}
+
+/* ==========================================
+   PÁGINA: LA IGLESIA HUNDIDA
+   ========================================== */
+
+/* Portada específica de la iglesia con tono más oscuro y misterioso */
+.hero-iglesia {
+    background: linear-gradient(rgba(0, 0, 0, 0.400), rgba(0, 0, 0, 0.400)), 
+                url('img/iglecia.jpg') center/cover no-repeat;
+    background-attachment: fixed;
+}
+
+/* Sección de Leyendas (Fondo oscuro tipo pergamino o noche) */
+.seccion-leyendas {
+    background-color: #1a1a1a; /* Un gris casi negro */
+    background-image: radial-gradient(circle, #2a2a2a 0%, #111 100%);
+    padding: 100px 20px;
+    color: #f1f1f1;
+}
+
+.titulo-leyenda {
+    font-family: var(--fuente-titulos);
+    color: var(--color-secundario); /* El tono arena/beige brilla bien en fondo negro */
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+
+.texto-leyenda {
+    font-family: var(--fuente-titulos);
+    font-size: 1.5rem;
+    font-style: italic;
+    line-height: 1.8;
+    color: #e0e0e0;
+    position: relative;
+}
+
+/* Comillas gigantes decorativas para la leyenda */
+.texto-leyenda::before {
+    content: '"';
+    font-size: 5rem;
+    color: var(--color-primario);
+    position: absolute;
+    top: -40px;
+    left: -30px;
+    opacity: 0.5;
+}
+
+/* ==========================================
+   SECCIÓN DE LEYENDAS (CON NEBLINA ANIMADA)
+   ========================================== */
+.seccion-leyendas {
+    background-color: #111111; 
+    background-image: radial-gradient(circle, #2a2a2a 0%, #000000 100%);
+    padding: 120px 20px;
+    color: #f1f1f1;
+    
+    /* ESTO ES VITAL para que la neblina no se salga de la sección */
+    position: relative; 
+    overflow: hidden; 
+}
+
+/* Protegemos el texto para que la neblina pase por detrás/encima sin taparlo feo */
+.seccion-leyendas .container {
+    position: relative;
+    z-index: 10; 
+}
+
+/* --- CAPA DE NEBLINA 1 (Rápida y al frente) --- */
+.seccion-leyendas::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%; /* El doble de ancho para que se mueva sin cortarse */
+    height: 100%;
+    /* Usamos una textura de niebla transparente gratuita */
+    background: url('https://raw.githubusercontent.com/danielstuart14/CSS_FOG_ANIMATION/master/fog1.png') repeat-x;
+    background-size: cover;
+    opacity: 0.4; /* Qué tan transparente es */
+    z-index: 1;
+    pointer-events: none; /* Para que puedas seguir seleccionando el texto con el mouse */
+    animation: moverNiebla 40s linear infinite; /* Se mueve rápido (40 segundos) */
+}
+
+/* --- CAPA DE NEBLINA 2 (Lenta y al fondo para dar profundidad 3D) --- */
+.seccion-leyendas::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 100%;
+    background: url('https://raw.githubusercontent.com/danielstuart14/CSS_FOG_ANIMATION/master/fog2.png') repeat-x;
+    background-size: cover;
+    opacity: 0.25;
+    z-index: 2;
+    pointer-events: none;
+    animation: moverNiebla 70s linear infinite; /* Se mueve lento (70 segundos) */
+}
+
+/* --- ANIMACIÓN DEL MOVIMIENTO --- */
+@keyframes moverNiebla {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* (A partir de aquí mantienes tu código de .titulo-leyenda y .caja-leyenda que ya tenías) */
+
+.titulo-leyenda {
+    font-family: var(--fuente-titulos);
+    color: var(--color-secundario); 
+    font-size: 3rem;
+    margin-bottom: 30px;
+    position: relative;
+    z-index: 10;
+}
+
+
+/* ==========================================
+   SECCIÓN: GALERÍA DINÁMICA
+   ========================================== */
+.seccion-galeria {
+    background-color: var(--color-blanco);
+}
+
+/* Usamos CSS Grid para acomodar las fotos perfecto */
+.galeria-grid {
+    display: grid;
+    /* Esto hace que se ajusten solas según el tamaño de la pantalla */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px; /* Espacio entre fotos */
+}
+
+/* Contenedor de cada foto */
+.galeria-item {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden; /* Evita que el zoom de la foto se salga del borde redondeado */
+    height: 250px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    cursor: pointer;
+}
+
+/* La imagen dentro del contenedor */
+.galeria-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recorta la imagen para que llene el cuadro perfecto */
+    transition: transform 0.5s ease; /* Transición suave de medio segundo */
+}
+
+/* Efecto oscuro y texto que aparece encima */
+.galeria-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0,0,0,0.85)); /* Degradado oscuro */
+    color: #ffffff;
+    padding: 20px;
+    /* Lo escondemos moviéndolo hacia abajo */
+    transform: translateY(100%);
+    transition: transform 0.4s ease;
+}
+
+.galeria-overlay h4 {
+    font-family: var(--fuente-titulos);
+    font-size: 1.3rem;
+    color: var(--color-secundario);
+    margin-bottom: 5px;
+}
+
+.galeria-overlay p {
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+/* ---- LA MAGIA AL PASAR EL MOUSE (HOVER) ---- */
+
+/* 1. La foto hace un pequeño zoom */
+.galeria-item:hover img {
+    transform: scale(1.1);
+}
+
+/* 2. El texto sube y aparece */
+.galeria-item:hover .galeria-overlay {
+    transform: translateY(0);
+}
+
+
+
+/* ==========================================
+   SECCIÓN: VIDEOS EN BUCLE
+   ========================================== */
+.seccion-videos {
+    /* Un fondo color beige muy clarito para separarlo de la galería blanca */
+    background-color: #F9F7F1; 
+}
+
+.contenedor-video {
+    position: relative;
+    border-radius: 15px;
+    overflow: hidden; /* Esto es clave para que el video no se salga de las esquinas redondas */
+    background-color: #000000; /* Fondo negro por si el video tarda un segundo en cargar */
+    height: 350px; /* Altura fija para que ambos videos midan exactamente lo mismo */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto al pasar el mouse por encima del video */
+.contenedor-video:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15) !important;
+}
+
+.contenedor-video video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recorta y ajusta el video para que llene todo el cuadro sin deformarse */
+    pointer-events: none; /* TRUCO: Desactiva los clics sobre el video para que el usuario no pueda interactuar con él */
+}
+
+
+
+
+/* ==========================================
+   EFECTO DINÁMICO: TEMA OSCURO EN VIDEOS
+   ========================================== */
+
+/* 1. Le decimos al cuerpo de la página que los colores deben cambiar suavemente */
+body {
+    transition: background-color 0.8s ease-in-out, color 0.8s ease-in-out;
+}
+
+/* 2. Añadimos transición a la sección de videos para que coincida */
+.seccion-videos {
+    transition: background-color 0.8s ease-in-out;
+}
+
+/* 3. Las reglas del "Modo Oscuro" que JavaScript activará mágicamente */
+body.modo-oscuro {
+    background-color: #080808 !important; /* Negro muy profundo */
+    color: #f1f1f1 !important; /* Texto blanco suave */
+}
+
+/* Forzamos a la sección de videos a volverse negra también */
+body.modo-oscuro .seccion-videos {
+    background-color: #080808 !important;
+}
+
+/* Cambiamos el color del título para que brille en la oscuridad */
+body.modo-oscuro .titulo-seccion {
+    color: var(--color-secundario) !important;
+    transition: color 0.8s ease-in-out;
+}
+
+/* Y aclaramos el subtítulo */
+body.modo-oscuro .subtitulo-seccion {
+    color: #cccccc !important;
+    transition: color 0.8s ease-in-out;
+}
+
+
+
+
+/* ==========================================
+   PÁGINA: FIESTAS Y TRADICIONES
+   ========================================== */
+
+.hero-tradiciones {
+    background: linear-gradient(rgba(139, 69, 19, 0.6), rgba(0, 0, 0, 0.5)), 
+                url('img/Gemini_Generated_Image_69tkmd69tkmd69tk.png') center/cover no-repeat;
+}
+
+.badge-fecha {
+    display: inline-block;
+    background-color: var(--color-primario);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 0.8rem;
+}
+
+.card-festiva {
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+    background: #fff;
+}
+
+.card-festiva:hover {
+    transform: scale(1.03);
+}
+
+.seccion-aserrin {
+    background: linear-gradient(45deg, #8B4513, #D2B48C);
+    padding: 80px 0;
+    position: relative;
+}
+
+/* Efecto de marco para la foto de las tradiciones */
+.marco-foto-tradicion {
+    padding: 10px;
+    background: white;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    transform: rotate(3deg); /* Foto un poco chueca como si estuviera pegada en un álbum */
+    transition: transform 0.3s ease;
+}
+
+.marco-foto-tradicion:hover {
+    transform: rotate(0deg);
+}
+
+/* Color para Semana Santa (Amarillo/Dorado) */
+.bg-warning {
+    background-color: #D4AF37 !important; /* Un dorado litúrgico */
+    color: #000 !important;
+}
+
+/* Color para el Señor del Quejido (Rojo Sangre/Navideño) */
+.bg-danger {
+    background-color: #8B0000 !important;
+    color: #fff !important;
+}
+
+/* Ajustes a la tarjeta principal para que resalte más */
+.card-principal {
+    border-top: 10px solid #8B0000;
+    background-color: #fffcf9;
+}
+
+.detalles-fiesta span {
+    margin-right: 20px;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: var(--color-primario);
+}
+
+
+/* ==========================================
+   ESTILO: LA LEYENDA DEL LEÑADOR
+   ========================================== */
+
+/* Fondo de la sección con un tono tierra suave */
+.seccion-relato {
+    background-color: #f2ede4;
+    padding: 100px 0;
+}
+
+/* El contenedor tipo pergamino / madera */
+.pergamino-historia {
+    background-color: #ffffff;
+    border: 2px solid #8B4513; /* Color café madera */
+    border-radius: 8px;
+    position: relative;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+    z-index: 1;
+}
+
+/* Decoración interna: bordes dobles */
+.pergamino-historia::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    border: 1px solid #d2b48c;
+    pointer-events: none;
+    z-index: -1;
+}
+
+/* Título con tipografía elegante */
+.titulo-relato {
+    font-family: var(--fuente-titulos);
+    color: #5d3a1a; /* Café oscuro */
+    font-weight: 700;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+/* Adornos decorativos entre párrafos */
+.adorno-historia {
+    color: #8B4513;
+    font-size: 1.5rem;
+    display: block;
+    margin: 10px 0;
+    letter-spacing: 5px;
+}
+
+/* Estilo de los párrafos del relato */
+.cuerpo-relato p {
+    font-family: 'Lora', serif;
+    font-size: 1.2rem;
+    line-height: 1.9;
+    color: #333;
+    margin-bottom: 25px;
+    text-align: justify;
+}
+
+/* La frase del quejido resaltada */
+.cuerpo-relato blockquote {
+    font-family: 'Lora', serif;
+    font-style: italic;
+    font-size: 1.4rem;
+    color: #b71c1c; /* Color sangre/tinto por la leyenda */
+    text-align: center;
+    padding: 30px;
+    margin: 40px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    background-color: #fffaf0;
+}
+
+/* Letra capital (La primera letra más grande) */
+.cuerpo-relato p:first-of-type::first-letter {
+    font-size: 4rem;
+    float: left;
+    margin-right: 10px;
+    line-height: 1;
+    color: #8B4513;
+    font-family: var(--fuente-titulos);
+}
+
+/* Detalle visual de un tronco o hacha (opcional con símbolos) */
+.cuerpo-relato strong {
+    color: #8B4513;
+    font-weight: 700;
+}
+
+
+
+/* ==========================================
+   ESTILO: SECCIÓN CÓMO LLEGAR (MAPA)
+   ========================================== */
+
+.seccion-mapa {
+    background-color: #f8f9fa;
+    min-height: 80vh;
+}
+
+.contenedor-iframe {
+    position: relative;
+    border-radius: 25px; /* Bordes redondeados bonitos */
+    overflow: hidden; /* Corta las esquinas del mapa */
+    border: 5px solid white;
+}
+
+.info-llegar i {
+    color: var(--color-primario) !important;
+}
+
+.btn-primary {
+    background-color: var(--color-primario);
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-secundario);
+    transform: translateY(-3px);
+}

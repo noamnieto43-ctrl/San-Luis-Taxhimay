@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>San Luis Taxhimay | Descubre la magia</title>
+    
+    <link rel="icon" href="img/20250906_182534.jpg" type="image/jpeg">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    
+    <!-- 1. BOOTSTRAP CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="Inicio.css">
+</head>
+<body>
+
+    <!-- MENÚ DE NAVEGACIÓN (Estilo Bootstrap) -->
+    <nav class="navbar navbar-expand-lg fixed-top mi-navbar">
+        <div class="container">
+            <a class="navbar-brand logo" href="#">San Luis Taxhimay</a>
+            
+            <!-- Botón de Hamburguesa para celulares -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuNavegacion" aria-controls="menuNavegacion" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <!-- Enlaces del menú -->
+            <div class="collapse navbar-collapse justify-content-end" id="menuNavegacion">
+                <ul class="navbar-nav nav-links text-center">
+                    
+                    <li class="nav-item"><a class="nav-link" href="iglesia.html">La Iglesia Hundida</a></li>
+                    <li class="nav-item"><a class="nav-link" href="fiestas.html">Fiestas</a></li>
+                    <li class="nav-item"><a class="nav-link" href="Comollegar.html">Como llegar</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECCIÓN DE PORTADA (HERO) -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content mx-auto">
+                <h1>El Misterio bajo el Agua</h1>
+                <p>Descubre San Luis Taxhimay: navega por nuestra presa, maravíllate con las cúpulas hundidas y conecta con la naturaleza del Estado de México.</p>
+                <a href="#turismo" class="btn-primary">Ver paseos en lancha</a>
+            </div>
+        </div>
+
+        <!-- DIVISOR CURVO BLANCO -->
+        <div class="custom-shape-divider-bottom">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,52.47V0Z" class="shape-fill"></path>
+            </svg>
+        </div>
+    </section>
+
+   <!-- SECCIÓN DE HISTORIA -->
+    <main id="historia" class="seccion-historia">
+        <div class="container">
+            <div class="row align-items-center">
+                
+                <!-- Columna de Texto -->
+                <div class="col-md-6 texto-historia">
+                    <h2 class="titulo-seccion">El Pueblo Bajo el Agua</h2>
+                    <h3 class="subtitulo-seccion">San Luis de las Peras</h3>
+                    <p>
+                        Bajo las tranquilas aguas de la presa Taxhimay descansan los recuerdos del antiguo poblado de San Luis de las Peras. En 1934, sus habitantes tuvieron que abandonar sus hogares, sus huertas y su parroquia para dar paso a la construcción de la presa, una obra destinada a llevar agua hacia el Valle del Mezquital.
+                    </p>
+                    <p>
+                        Hoy en día, la cúpula de la parroquia de San Luis Rey de Francia y la torre de la iglesia del Cristo del Quejido emergen de las profundidades como testigos silenciosos del pasado. Cuando el nivel del agua baja, es posible caminar entre las ruinas de piedra de lo que alguna vez fue un pueblo lleno de vida.
+                    </p>
+                </div>
+
+                <!-- Columna de Imagen -->
+                <div class="col-md-6 mt-4 mt-md-0">
+                    <!-- Aquí puedes poner una foto antigua del pueblo o una foto de las cúpulas. 
+                         La clase 'img-fluid' hace que no se desborde, y 'rounded' y 'shadow' le dan estilo. -->
+                    <img src="img/antes.jpg" alt="Cúpulas de San Luis Taxhimay" class="img-fluid rounded shadow-lg imagen-historia"
+                    >
+                </div>
+
+            </div>
+        </div>
+  </main>
+<!-- SECCIÓN DE DATOS CURIOSOS -->
+    <section id="datos-curiosos" class="seccion-datos py-5">
+        <div class="container my-4">
+            <!-- Título centrado -->
+            <div class="text-center mb-5">
+                <h2 class="titulo-seccion">¿Sabías qué?</h2>
+                <h3 class="subtitulo-seccion">Datos curiosos de San Luis Taxhimay</h3>
+            </div>
+            
+            <!-- Cuadrícula de tarjetas de Bootstrap -->
+            <div class="row g-4">
+                
+                <!-- Tarjeta 1 -->
+                <div class="col-md-4">
+                    <div class="tarjeta-dato h-100 p-4 shadow-sm text-center">
+                        <div class="icono-dato mb-3">🍐</div>
+                        <h4 class="titulo-dato">San Luis "de las Peras"</h4>
+                        <p>Antes de ser inundado, el pueblo original llevaba ese nombre porque estaba rodeado de inmensos y fértiles huertos de peras, manzanas y duraznos.</p>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 2 -->
+                <div class="col-md-4">
+                    <div class="tarjeta-dato h-100 p-4 shadow-sm text-center">
+                        <div class="icono-dato mb-3">⛪</div>
+                        <h4 class="titulo-dato">No es una, son dos</h4>
+                        <p>Las cúpulas que asoman del agua no pertenecen a la misma iglesia. La más grande es la Parroquia de San Luis Rey de Francia, y la pequeña es la cúpula del Cristo del Quejido.</p>
+                    </div>
+                </div>
+
+                <!-- Tarjeta 3 -->
+                <div class="col-md-4">
+                    <div class="tarjeta-dato h-100 p-4 shadow-sm text-center">
+                        <div class="icono-dato mb-3">💧</div>
+                        <h4 class="titulo-dato">El Proyecto de 1934</h4>
+                        <p>La presa fue mandada a construir durante el gobierno del presidente Lázaro Cárdenas, con el objetivo principal de abastecer de agua al vecino estado de Hidalgo.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+    </section>
+
+
+
+    <!-- SECCIÓN QUÉ HACER (TURISMO) -->
+    <section id="turismo" class="seccion-actividades py-5">
+        <div class="container my-5">
+            <div class="text-center mb-5">
+                <h2 class="titulo-seccion">Aventura en la Presa</h2>
+                <h3 class="subtitulo-seccion">Actividades imperdibles</h3>
+            </div>
+
+            <div class="row g-4">
+                <!-- Actividad 1 -->
+                <div class="col-md-4">
+                    <div class="card tarjeta-actividad h-100 border-0 shadow-sm">
+                        <!-- Pon una foto de lanchas aquí -->
+                        <img src="img/barco.jpeg" class="card-img-top" alt="Paseos en lancha">
+                        <div class="card-body text-center p-4">
+                            <h4 class="card-title" style="color: var(--color-primario); font-family: var(--fuente-titulos);">Paseos en Lancha</h4>
+                            <p class="card-text">Navega por las tranquilas aguas de la presa y acércate a las ruinas hundidas. Los lancheros locales te contarán las leyendas del lugar.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Actividad 2 -->
+                <div class="col-md-4">
+                    <div class="card tarjeta-actividad h-100 border-0 shadow-sm">
+                        <!-- Pon una foto de kayaks aquí -->
+                        <img src="img/kaya.jpg" class="card-img-top" alt="Kayak">
+                        <div class="card-body text-center p-4">
+                            <h4 class="card-title" style="color: var(--color-primario); font-family: var(--fuente-titulos);">Renta de Kayaks</h4>
+                            <p class="card-text">Para los más aventureros, remar por tu cuenta al atardecer es una experiencia relajante y perfecta para conectar con la naturaleza.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Actividad 3 -->
+                <div class="col-md-4">
+                    <div class="card tarjeta-actividad h-100 border-0 shadow-sm">
+                        <!-- Pon una foto del paisaje/ruinas aquí -->
+                        <img src="img/pie.webp" class="card-img-top" alt="Senderismo">
+                        <div class="card-body text-center p-4">
+                            <h4 class="card-title" style="color: var(--color-primario); font-family: var(--fuente-titulos);">Exploración a pie</h4>
+                            <p class="card-text">Cuando el nivel del agua baja, camina entre los vestigios de piedra del antiguo pueblo de San Luis de las Peras.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+     
+
+
+    <!-- SECCIÓN DE LA ANIMACIÓN FINAL (Pueblo y Presa) -->
+    <section id="animacion-inundacion" class="contenedor-inundacion">
+        
+        <!-- Escenario en SVG: Colinas, Casitas, Árboles y la Iglesia -->
+        <svg viewBox="0 0 800 400" preserveAspectRatio="xMidYMax slice" class="svg-escenario">
+            
+            <!-- Colina Izquierda (Orilla) -->
+            <path d="M0,400 L0,220 Q150,220 300,400 Z" fill="#6d4c41"/>
+            
+            <!-- Colina Derecha (Orilla) -->
+            <path d="M800,400 L800,200 Q650,220 500,400 Z" fill="#6d4c41"/>
+
+            <!-- Árbol y Casita Izquierda -->
+            <g transform="translate(60, 200)">
+                <!-- Árbol -->
+                <rect x="-2" y="30" width="4" height="20" fill="#4E342E" />
+                <polygon points="0,0 -15,35 15,35" fill="#2E7D32" />
+                <!-- Casita -->
+                <rect x="25" y="20" width="40" height="30" fill="#FFF3E0" />
+                <polygon points="45,5 20,20 70,20" fill="#D84315" />
+                <rect x="40" y="35" width="10" height="15" fill="#5D4037" />
+            </g>
+
+            <!-- Árboles y Casita Derecha -->
+            <g transform="translate(700, 180)">
+                <!-- Casita -->
+                <rect x="0" y="20" width="45" height="30" fill="#FFE0B2" />
+                <polygon points="22.5,5 -5,20 50,20" fill="#BF360C" />
+                <rect x="20" y="30" width="12" height="20" fill="#4E342E" />
+                <!-- Árbol -->
+                <rect x="60" y="25" width="6" height="25" fill="#4E342E" />
+                <polygon points="63,-5 45,30 81,30" fill="#1B5E20" />
+            </g>
+
+            <!-- LA IGLESIA (En el centro, abajo, lista para hundirse) -->
+            <g transform="translate(350, 290)">
+                <!-- Base -->
+                <rect x="20" y="60" width="60" height="60" fill="#D2B48C" stroke="#333" stroke-width="2"/>
+                <!-- Puerta -->
+                <path d="M 40 120 L 40 90 A 10 10 0 0 1 60 90 L 60 120 Z" fill="#555"/>
+                <!-- Cúpula / Campanario -->
+                <rect x="35" y="30" width="30" height="30" fill="#D2B48C" stroke="#333" stroke-width="2"/>
+                <polygon points="30,30 50,0 70,30" fill="#8B4513" stroke="#333" stroke-width="2"/>
+                <!-- Cruz -->
+                <line x1="50" y1="-15" x2="50" y2="5" stroke="#333" stroke-width="3"/>
+                <line x1="42" y1="-5" x2="58" y2="-5" stroke="#333" stroke-width="3"/>
+            </g>
+        </svg>
+
+        <!-- Contenedor del agua y las olas dinámicas -->
+        <div id="agua" class="ola-agua">
+            <!-- Capas de olas para el efecto 3D en movimiento -->
+            <div class="ola ola-trasera"></div>
+            <div class="ola ola-frontal"></div>
+        </div>
+
+    </section>
+ <footer class="bg-dark text-white text-center py-4">
+        <p class="m-0">© 2026 San Luis Taxhimay - Patrimonio e Historia</p>
+    </footer>
+    <!-- 1. Script de Bootstrap (Para que el menú funcione en celulares) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- 2. Script de la Animación (El vigilante que hace que el agua suba) -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const agua = document.getElementById('agua');
+            const seccionAnimacion = document.getElementById('animacion-inundacion');
+
+            const observer = new IntersectionObserver((entradas) => {
+                entradas.forEach(entrada => {
+                    // Si el usuario llega a esta sección, el agua sube
+                    if (entrada.isIntersecting) {
+                        agua.classList.add('inundar'); 
+                    } else {
+                        // Si el usuario se va, el agua baja
+                        agua.classList.remove('inundar'); 
+                    }
+                });
+            }, { threshold: 0.5 }); // Se activa cuando ves la mitad de la sección
+
+            observer.observe(seccionAnimacion);
+        });
+    </script>
+
+
+
+</body>
+</html>
